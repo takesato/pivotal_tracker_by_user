@@ -1,19 +1,17 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 require 'rubygems'
-require 'fastercsv'
+require 'csv'
 require 'active_support/core_ext/enumerable'
 require 'time'
-Dir['models/*.rb'].each { |file| require file }
+require './downloader.rb'
 
-if ARGV.length != 1
-  puts "Usage: #{__FILE__} <Your CSV file>"
-  exit
-end
+require './models/story.rb'
+Dir['./models/*.rb'].each { |file| require file }
 
 features, bugs, chores, dates = [], [], [], []
 
-FasterCSV.foreach(ARGV.first, :headers => true) do |row|
+CSV.parse(Downloader.get_csv, :headers => true) do |row|
   unless (date = row["Accepted at"]).nil?
     user = row["Owned By"].nil? ? "Unassigned" : row["Owned By"]
     case row['Story Type']

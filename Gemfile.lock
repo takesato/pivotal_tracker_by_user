@@ -6,7 +6,6 @@ GEM
     activesupport (3.0.0)
     domain_name (0.5.14)
       unf (>= 0.0.5, < 1.0.0)
-    fastercsv (1.5.5)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     mechanize (2.7.2)
@@ -36,6 +35,5 @@ PLATFORMS
 
 DEPENDENCIES
   active_support
-  fastercsv
   mechanize
   settingslogic

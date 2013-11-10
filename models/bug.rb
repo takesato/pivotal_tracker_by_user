@@ -1,5 +1,3 @@
-require 'models/story'
-
 class Bug < Story
 
   ### Instance Methods ###

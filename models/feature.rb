@@ -1,5 +1,3 @@
-require 'models/story'
-
 class Feature < Story
 
   ### Attributes ###
