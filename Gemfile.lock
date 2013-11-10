@@ -5,6 +5,7 @@ GEM
       activesupport (= 3.0.0)
     activesupport (3.0.0)
     fastercsv (1.5.5)
+    settingslogic (2.0.9)
 
 PLATFORMS
   ruby
@@ -12,3 +13,4 @@ PLATFORMS
 DEPENDENCIES
   active_support
   fastercsv
+  settingslogic

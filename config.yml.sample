@@ -1,0 +1,4 @@
+pivotal_tracker:
+  user_id: your_mail_address
+  password: password
+  project_id: 123456
